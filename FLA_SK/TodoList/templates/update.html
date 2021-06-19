@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block Head %}UpToDate | Todo_Project @NKeymaz{% endblock %}
+
+{% block content %}
+
+<form action="/update/{{ user.id }}" method="POST">
+    <input type="text" name="name"   class="form-control" value="{{ user.name }}"><br>
+    <input type="text" name="phone"  class="form-control" value="{{ user.phone }}"><br>
+    <input type="text" name="email"  class="form-control" value="{{ user.email }}"><br>
+    <input type="text" name="city"   class="form-control" value="{{ user.city }}"><br><br>
+    <input type="submit" class="btn btn-info" value="UpToDate">
+</form>
+
+{% endblock %}
